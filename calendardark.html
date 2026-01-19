@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<!-- fuck ai -->
+<body>
+<head>
+
+    <title>Calendar</title>
+
+    <h1>Calendar</h1>
+    <h1 id="year"></h1>
+    <h1 id="currentmonth"></h1>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<!-- Calendar svg as code -->
+    <div class="cal">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="734" height="548">
+    <path d="M0 0 C242.22 0 484.44 0 734 0 C734 180.84 734 361.68 734 548 C491.78 548 249.56 548 0 548 C0 367.16 0 186.32 0 0 Z M2 2 C2 17.51 2 33.02 2 49 C34.67 49 67.34 49 101 49 C101 33.49 101 17.98 101 2 C68.33 2 35.66 2 2 2 Z M103 2 C103 17.51 103 33.02 103 49 C138.31 49 173.62 49 210 49 C210 33.49 210 17.98 210 2 C174.69 2 139.38 2 103 2 Z M212 2 C212 17.51 212 33.02 212 49 C245.33 49 278.66 49 313 49 C313 33.49 313 17.98 313 2 C279.67 2 246.34 2 212 2 Z M315 2 C315 17.51 315 33.02 315 49 C351.96 49 388.92 49 427 49 C427 33.49 427 17.98 427 2 C390.04 2 353.08 2 315 2 Z M429 2 C429 17.51 429 33.02 429 49 C465.96 49 502.92 49 541 49 C541 33.49 541 17.98 541 2 C504.04 2 467.08 2 429 2 Z M543 2 C543 17.51 543 33.02 543 49 C574.35 49 605.7 49 638 49 C638 33.49 638 17.98 638 2 C606.65 2 575.3 2 543 2 Z M640 2 C640 17.51 640 33.02 640 49 C670.36 49 700.72 49 732 49 C732 33.49 732 17.98 732 2 C701.64 2 671.28 2 640 2 Z M2 51 C2 78.72 2 106.44 2 135 C34.67 135 67.34 135 101 135 C101 107.28 101 79.56 101 51 C68.33 51 35.66 51 2 51 Z M103 51 C103 78.72 103 106.44 103 135 C138.31 135 173.62 135 210 135 C210 107.28 210 79.56 210 51 C174.69 51 139.38 51 103 51 Z M212 51 C212 78.72 212 106.44 212 135 C245.33 135 278.66 135 313 135 C313 107.28 313 79.56 313 51 C279.67 51 246.34 51 212 51 Z M315 51 C315 78.72 315 106.44 315 135 C351.96 135 388.92 135 427 135 C427 107.28 427 79.56 427 51 C390.04 51 353.08 51 315 51 Z M429 51 C429 78.72 429 106.44 429 135 C465.96 135 502.92 135 541 135 C541 107.28 541 79.56 541 51 C504.04 51 467.08 51 429 51 Z M543 51 C543 78.72 543 106.44 543 135 C574.35 135 605.7 135 638 135 C638 107.28 638 79.56 638 51 C606.65 51 575.3 51 543 51 Z M640 51 C640 78.72 640 106.44 640 135 C670.36 135 700.72 135 732 135 C732 107.28 732 79.56 732 51 C701.64 51 671.28 51 640 51 Z M2 137 C2 170.33 2 203.66 2 238 C34.67 238 67.34 238 101 238 C101 204.67 101 171.34 101 137 C68.33 137 35.66 137 2 137 Z M103 137 C103 170.33 103 203.66 103 238 C138.31 238 173.62 238 210 238 C210 204.67 210 171.34 210 137 C174.69 137 139.38 137 103 137 Z M212 137 C212 170.33 212 203.66 212 238 C245.33 238 278.66 238 313 238 C313 204.67 313 171.34 313 137 C279.67 137 246.34 137 212 137 Z M315 137 C315 170.33 315 203.66 315 238 C351.96 238 388.92 238 427 238 C427 204.67 427 171.34 427 137 C390.04 137 353.08 137 315 137 Z M429 137 C429 170.33 429 203.66 429 238 C465.96 238 502.92 238 541 238 C541 204.67 541 171.34 541 137 C504.04 137 467.08 137 429 137 Z M543 137 C543 170.33 543 203.66 543 238 C574.35 238 605.7 238 638 238 C638 204.67 638 171.34 638 137 C606.65 137 575.3 137 543 137 Z M640 137 C640 170.33 640 203.66 640 238 C670.36 238 700.72 238 732 238 C732 204.67 732 171.34 732 137 C701.64 137 671.28 137 640 137 Z M2 240 C2 273.33 2 306.66 2 341 C34.67 341 67.34 341 101 341 C101 307.67 101 274.34 101 240 C68.33 240 35.66 240 2 240 Z M103 240 C103 273.33 103 306.66 103 341 C138.31 341 173.62 341 210 341 C210 307.67 210 274.34 210 240 C174.69 240 139.38 240 103 240 Z M212 240 C212 273.33 212 306.66 212 341 C245.33 341 278.66 341 313 341 C313 307.67 313 274.34 313 240 C279.67 240 246.34 240 212 240 Z M315 240 C315 273.33 315 306.66 315 341 C351.96 341 388.92 341 427 341 C427 307.67 427 274.34 427 240 C390.04 240 353.08 240 315 240 Z M429 240 C429 273.33 429 306.66 429 341 C465.96 341 502.92 341 541 341 C541 307.67 541 274.34 541 240 C504.04 240 467.08 240 429 240 Z M543 240 C543 273.33 543 306.66 543 341 C574.35 341 605.7 341 638 341 C638 307.67 638 274.34 638 240 C606.65 240 575.3 240 543 240 Z M640 240 C640 273.33 640 306.66 640 341 C670.36 341 700.72 341 732 341 C732 307.67 732 274.34 732 240 C701.64 240 671.28 240 640 240 Z M2 343 C2 379.3 2 415.6 2 453 C34.67 453 67.34 453 101 453 C101 416.7 101 380.4 101 343 C68.33 343 35.66 343 2 343 Z M103 343 C103 379.3 103 415.6 103 453 C138.31 453 173.62 453 210 453 C210 416.7 210 380.4 210 343 C174.69 343 139.38 343 103 343 Z M212 343 C212 379.3 212 415.6 212 453 C245.33 453 278.66 453 313 453 C313 416.7 313 380.4 313 343 C279.67 343 246.34 343 212 343 Z M315 343 C315 379.3 315 415.6 315 453 C351.96 453 388.92 453 427 453 C427 416.7 427 380.4 427 343 C390.04 343 353.08 343 315 343 Z M429 343 C429 379.3 429 415.6 429 453 C465.96 453 502.92 453 541 453 C541 416.7 541 380.4 541 343 C504.04 343 467.08 343 429 343 Z M543 343 C543 379.3 543 415.6 543 453 C574.35 453 605.7 453 638 453 C638 416.7 638 380.4 638 343 C606.65 343 575.3 343 543 343 Z M640 343 C640 379.3 640 415.6 640 453 C670.36 453 700.72 453 732 453 C732 416.7 732 380.4 732 343 C701.64 343 671.28 343 640 343 Z M2 455 C2 485.03 2 515.06 2 546 C34.67 546 67.34 546 101 546 C101 515.97 101 485.94 101 455 C68.33 455 35.66 455 2 455 Z M103 455 C103 485.03 103 515.06 103 546 C138.31 546 173.62 546 210 546 C210 515.97 210 485.94 210 455 C174.69 455 139.38 455 103 455 Z M212 455 C212 485.03 212 515.06 212 546 C245.33 546 278.66 546 313 546 C313 515.97 313 485.94 313 455 C279.67 455 246.34 455 212 455 Z M315 455 C315 485.03 315 515.06 315 546 C351.96 546 388.92 546 427 546 C427 515.97 427 485.94 427 455 C390.04 455 353.08 455 315 455 Z M429 455 C429 485.03 429 515.06 429 546 C465.96 546 502.92 546 541 546 C541 515.97 541 485.94 541 455 C504.04 455 467.08 455 429 455 Z M543 455 C543 485.03 543 515.06 543 546 C574.35 546 605.7 546 638 546 C638 515.97 638 485.94 638 455 C606.65 455 575.3 455 543 455 Z M640 455 C640 485.03 640 515.06 640 546 C670.36 546 700.72 546 732 546 C732 515.97 732 485.94 732 455 C701.64 455 671.28 455 640 455 Z " fill="#FFFFFF" transform="translate(0,0)"/>
+    </svg>
+    </div>
+
+    <h2>Sun&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tues&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thur&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fri&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sat</h2>
+    <div class="darkmb">
+        <a href="calendar.html"><h3>Light Mode</h3></a> |
+    </div>
+
+<footer>
+    <div class="premb">
+        <a href="premiumdark.html"><h1>GET PREMIUM NOW!</h1></a>
+    </div>
+
+        <div class="a">
+        <h3>1</h3>
+    </div>
+        <div class="b">
+        <h3>2</h3>
+    </div>
+        <div class="c">
+        <h3>3</h3>
+    </div>
+        <div class="d">
+        <h3>4</h3>
+    </div>
+        <div class="e">
+        <h3>5</h3>
+    </div>
+        <div class="f">
+        <h3>6</h3>
+    </div>
+        <div class="g">
+        <h3>7</h3>
+    </div>
+        <div class="h">
+        <h3>8</h3>
+    </div>
+        <div class="i">
+        <h3>9</h3>
+            </div>
+        <div class="j">
+        <h3>10</h3>
+            </div>
+        <div class="k">
+        <h3>11</h3>
+            </div>
+        <div class="l">
+        <h3>12</h3>
+            </div>
+        <div class="m">
+        <h3>13</h3>
+            </div>
+        <div class="n">
+        <h3>14</h3>
+            </div>
+        <div class="o">
+        <h3>15</h3>
+            </div>
+        <div class="p">
+        <h3>16</h3>
+            </div>
+        <div class="q">
+        <h3>17</h3>
+            </div>
+        <div class="r">
+        <h3>18</h3>
+            </div>
+        <div class="s">
+        <h3>19</h3>
+            </div>
+        <div class="t">
+        <h3>20</h3>
+            </div>
+        <div class="u">
+        <h3>21</h3>
+            </div>
+        <div class="v">
+        <h3>22</h3>
+            </div>
+        <div class="w">
+        <h3>23</h3>
+            </div>
+        <div class="x">
+        <h3>24</h3>
+            </div>
+        <div class="y">
+        <h3>25</h3>
+            </div>
+        <div class="z">
+        <h3>26</h3>
+            </div>
+        <div class="aa">
+        <h3>27</h3>
+            </div>
+        <div class="ab">
+        <h3>28</h3>
+            </div>
+        <div class="ac">
+        <h3>29</h3>
+            </div>
+        <div class="ad">
+        <h3>30</h3>
+            </div>
+        <div class="ae">
+        <h3>31</h3>
+            </div>
+        <div class="af">
+        <h3>32</h3>
+            </div>
+        <div class="ag">
+        <h3>33</h3>
+            </div>
+        <div class="ah">
+        <h3>34</h3>
+            </div>
+        <div class="ai">
+        <h3>35</h3>
+</footer>
+</body>
+
+
+<script>
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const d = new Date();
+    const m = d.getMonth();
+    const y = d.getFullYear();
+
+    document.getElementById("currentmonth").innerText = months[m];
+    document.getElementById("year").innerText = y;
+
+    const firstDay = new Date(y, m, 1).getDay(); // Sunday = 0
+    const totalDays = new Date(y, m + 1, 0).getDate();
+
+    const classes = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "aa", "ab", "ac", "ad", "ae", "af", "ag", "ah", "ai"];
+
+    classes.forEach((className, index) => {
+        const element = document.querySelector('.' + className + ' h3');
+        if (element) {
+            const dayNum = index - firstDay + 1;
+
+            if (dayNum > 0 && dayNum <= totalDays) {
+
+                element.innerText = dayNum;
+            } else {
+
+                element.innerText = "\u00A0"; 
+            }
+        }
+    });
+</script>
+
+
+
+<style>
+    .cal {
+        display: flex;
+        justify-content: center;
+    }
+    h1 {
+        display: flex;
+        justify-content: center;
+    }
+    h2 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        top : -555px;
+    }
+    .darkmb {
+        position: relative;
+        display: flex;
+        top : -830px;
+    }
+    .premb {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -120px;
+    }
+    body {
+        color: white;
+        background-color: black;
+    }
+    .a {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -720px;
+        left : -350px;
+    }
+    .b {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -780px;
+        left : -245px;
+    }
+    .c {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -840px;
+        left : -140px;
+    }
+    .d {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -900px;
+        left : -35px;
+    }
+    .e {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -960px;
+        left : 70px;
+    }
+    .f {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -1020px;
+        left : 185px;
+    }
+    .g {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -1080px;
+        left : 280px;
+    }
+    .h {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -1050px;
+        left : -350px;
+    }
+    .i {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -1110px;
+        left : -245px;
+    }
+    .j {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -1170px;
+        left : -140px;
+    }
+    .k {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -1230px;
+        left : -35px;
+    }
+    .l {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -1290px;
+        left : 75px;
+    }
+    .m {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -1350px;
+        left : 190px;
+    }
+    .n {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -1410px;
+        left : 285px;
+    }
+    .o {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -1365px;
+        left : -350px;
+    }
+    .p {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -1425px;
+        left : -248px;
+    }
+    .q {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -1485px;
+        left : -140px;
+    }
+    .r {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -1545px;
+        left : -35px;
+    }
+    .s {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -1605px;
+        left : 75px;
+    }
+    .t {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -1665px;
+        left : 190px;
+    }
+    .u {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -1725px;
+        left : 290px;
+    }
+    .v {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -1680px;
+        left : -350px;
+    }
+    .w {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -1740px;
+        left : -250px;
+    }
+    .x {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -1800px;
+        left : -140px;
+    }
+    .y {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -1860px;
+        left : -40px;
+    }
+    .z {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -1920px;
+        left : 74px;
+    }
+    .aa {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -1979px;
+        left : 190px;
+    }
+    .ab {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -2038px;
+        left : 285px;
+    }
+    .ac {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -1985px;
+        left : -350px;
+    }
+    .ad {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -2045px;
+        left : -250px;
+    }
+    .ae {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -2105px;
+        left : -140px;
+    }
+    .af {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -2164px;
+        left : -40px;
+    }
+    .ag {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -2224px;
+        left : 75px;
+    }
+    .ah {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -2283px;
+        left : 190px;
+    }
+    .ai {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top : -2342px;
+        left : 285px;
+    }
+</style>
